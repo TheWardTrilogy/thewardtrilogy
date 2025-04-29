@@ -1,3 +1,6 @@
+// File: src/app/page-client.js
+/* eslint-disable @next/next/no-img-element */
+/* eslint-disable react/no-unescaped-entities */
 'use client';
 import React, { useState } from 'react';
 
@@ -16,11 +19,8 @@ const characters = [
 export default function PageClient() {
   const [showChars, setShowChars] = useState(false);
   const [currentChar, setCurrentChar] = useState(0);
-
-  const nextChar = () =>
-    setCurrentChar((currentChar + 1) % characters.length);
-  const prevChar = () =>
-    setCurrentChar((currentChar - 1 + characters.length) % characters.length);
+  const nextChar = () => setCurrentChar((currentChar + 1) % characters.length);
+  const prevChar = () => setCurrentChar((currentChar - 1 + characters.length) % characters.length);
 
   return (
     <>

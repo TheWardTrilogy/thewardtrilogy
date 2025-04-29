@@ -1,12 +1,15 @@
-// File: src/app/layout.js
 import React from 'react';
+import Script from 'next/script';
 
-// Using Tailwind CSS via CDN to avoid PostCSS configuration errors
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        <script src="https://cdn.tailwindcss.com"></script>
+        {/* Tailwind via CDN */}
+        <Script
+          src="https://cdn.tailwindcss.com"
+          strategy="beforeInteractive"
+        />
       </head>
       <body>{children}</body>
     </html>
