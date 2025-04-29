@@ -77,7 +77,7 @@ export default function PageClient() {
                 <img
                   src={book.img}
                   alt={`${book.title} cover`}
-                  className="w-full h-64 object-cover"
+                  className="w-full h-64 object-cover object-top"
                 />
                 <div className="p-4">
                   <h3 className="text-xl font-medium text-gray-800 hover:text-purple-600 transition">
