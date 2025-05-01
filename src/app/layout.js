@@ -1,14 +1,14 @@
+// File: src/app/layout.js
 import React from 'react';
-import Script from 'next/script';
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        {/* Tailwind via CDN */}
-        <Script
-          src="https://cdn.tailwindcss.com"
-          strategy="beforeInteractive"
+        {/* Load our local Tailwind build */}
+        <link
+          rel="stylesheet"
+          href="/tailwind.min.css"
         />
       </head>
       <body>{children}</body>
