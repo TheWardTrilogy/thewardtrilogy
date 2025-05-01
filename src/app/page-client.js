@@ -28,7 +28,8 @@ const characters = [
   { id: 3, img: '/images/Randall.png',        caption: 'Randall' },
   { id: 4, img: '/images/Larsson.png',        caption: 'Larsson' },
   { id: 5, img: '/images/ParisaSafi.png',     caption: 'Parisa' },
-  { id: 6, img: '/images/ParisaSafi.png',     caption: 'Parisa' },
+  { id: 6, img: '/images/cherry2.png',     caption: 'Cherry' },
+  { id: 7, img: '/images/Alice.png',     caption: 'Alice' },
 ];
 
 export default function PageClient() {
