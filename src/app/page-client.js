@@ -28,6 +28,7 @@ const characters = [
   { id: 3, img: '/images/Randall.png',        caption: 'Randall' },
   { id: 4, img: '/images/Larsson.png',        caption: 'Larsson' },
   { id: 5, img: '/images/ParisaSafi.png',     caption: 'Parisa' },
+  { id: 6, img: '/images/ParisaSafi.png',     caption: 'Parisa' },
 ];
 
 export default function PageClient() {
