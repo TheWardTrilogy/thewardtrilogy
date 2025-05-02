@@ -46,13 +46,21 @@ export default function PageClient() {
   return (
     <>
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-purple-700 to-indigo-800 text-white py-24 sm:py-32">
+      <section
+        className="bg-gradient-to-r from-purple-700 to-indigo-800 text-white py-24 sm:py-32"
+        style={{
+          backgroundImage: 'url(/images/title-image.jpg), linear-gradient(to right, rgba(107, 33, 168, 0.4), rgba(76, 29, 149, 0.4))',
+          backgroundBlendMode: 'overlay',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+      >
         <div className="max-w-6xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold mb-6 leading-tight">
-            Dive into the Devious Criminal Mind of W.H. Clark
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold mb-6 leading-tight text-white drop-shadow-lg">
+            The Ward Trilogy by W.H. Clark
           </h1>
-          <p className="text-lg sm:text-xl mb-8 max-w-2xl mx-auto leading-relaxed">
-            The Ward Trilogy: A gripping mystery thriller trilogy that will take you to the darkest places.
+          <p className="text-lg sm:text-xl mb-8 max-w-2xl mx-auto leading-relaxed text-white drop-shadow">
+            A gripping mystery thriller trilogy that will take you to the darkest places.
           </p>
           <a
             href="#books"
@@ -66,7 +74,7 @@ export default function PageClient() {
       {/* Navigation */}
       <nav className="bg-white shadow-md sticky top-0 z-20 border-b border-gray-200">
         <div className="max-w-6xl mx-auto flex items-center justify-between py-4 px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl font-bold text-purple-700">W.H. Clark</h2>
+          <h2 className="text-2xl font-bold text-gray-600">W.H. Clark</h2>
           <ul className="flex space-x-6 text-gray-700 font-medium">
             {['books', 'listen', 'characters', 'about'].map((section) => (
               <li key={section}>
@@ -103,7 +111,7 @@ export default function PageClient() {
                 <h3 className="text-2xl sm:text-3xl font-medium text-gray-800 mb-4 hover:text-purple-700 transition-colors">
                   {books[2].title}
                 </h3>
-                <p className="text-lg text-center sm:text-xl text-gray-600 mb-6 leading-relaxed">
+                <p className="text-lg text-center sm:text-xl text-gray-900 mb-6 leading-relaxed">
                   <em>The thrilling conclusion to The Ward Trilogy is here!</em>
                 </p>
                 <p className="text-lg sm:text-xl text-left text-gray-600 mb-6 leading-relaxed">
@@ -111,6 +119,9 @@ export default function PageClient() {
                 </p>
                 <p className="text-lg sm:text-xl text-left text-gray-600 mb-6 leading-relaxed">
                   As the bodies pile up, Ward fights for his life to unearth the chilling truth about what happened that fateful day in 2004.
+                </p>
+                <p className="text-lg sm:text-xl text-center text-gray-900 mb-6 leading-relaxed">
+<em>Experience the pulse-pounding finale of The Ward Trilogy today!</em>
                 </p>
                 <span className="inline-block bg-purple-600 text-white font-semibold py-3 px-6 rounded-lg shadow-lg hover:bg-purple-700 transition-transform transform hover:scale-105">
                   Get It Now
@@ -160,7 +171,7 @@ export default function PageClient() {
                 key={book.id}
                 className="bg-gray-50 rounded-lg shadow-md p-6 text-center transition-shadow hover:shadow-lg"
               >
-                <h3 className="text-xl sm:text-2xl font-medium text-gray-800 mb-2">
+                <h3 className="text-xl sm:text-2xl font-medium text-gray-500 mb-2">
                   {book.title}
                 </h3>
                 <img
@@ -219,28 +230,79 @@ export default function PageClient() {
           )}
         </section>
 
-        {/* About Section */}
+        {/* About Section with Reviews */}
         <section id="about" className="bg-gray-100 rounded-xl shadow-lg p-6 sm:p-8">
-          <h2 className="text-3xl sm:text-4xl font-semibold text-gray-800 mb-6 border-b-2 border-gray-400 pb-2">
-            About the Author
-          </h2>
-          <div className="flex justify-center mb-6">
-            <img
-              src="/images/whclark.png"
-              alt="W.H. Clark"
-              className="w-32 h-32 sm:w-40 sm:h-40 rounded-full shadow-lg object-cover"
-            />
+          <div className="flex gap-8">
+            <div className="w-1/2">
+              <h2 className="text-3xl sm:text-4xl font-semibold text-gray-800 mb-6 border-b-2 border-gray-400 pb-2">
+                About the Author
+              </h2>
+              <div className="flex justify-center mb-6">
+                <img
+                  src="/images/whclark.png"
+                  alt="W.H. Clark"
+                  className="w-32 h-32 sm:w-40 sm:h-40 rounded-full shadow-lg object-cover"
+                />
+              </div>
+              <p className="text-lg sm:text-xl leading-relaxed mb-6 text-gray-700">
+                Wayne, AKA W.H. Clark, is the author behind <em>The Ward Trilogy</em>, a captivating series that blends traditional crime fiction with elements of dark mystery and high-stakes thrills. With a passion for storytelling and a unique voice, Wayne has crafted a world that will thrill and unsettle you.
+              </p>
+              <p className="text-lg sm:text-xl leading-relaxed mb-6 text-gray-700">
+                His own story, usually filled with fun and laughter, took a turn after a portentous encounter between his parents and his school teacher. After his teacher informed his parents that Wayne would one day use his intelligence to commit crime, his destiny seemed set. He began plotting the demise of his teacher, but the scheme never moved beyond planning, and he realized his true calling was writing about crime rather than living it.*
+              </p>
+              <p className="text-lg sm:text-xl leading-relaxed mb-6 text-gray-700">
+                Recently described as aloof, Wayne continues to craft compelling stories. Perhaps one day he will resurrect his plot against that teacher, but for now, he channels his creativity into bringing <em>The Ward Trilogy</em> to readers around the world.
+              </p>
+              <p className="text-sm sm:text-base text-gray-600 mt-4">*Based on a true story.</p>
+            </div>
+            <div className="w-1/2 space-y-6">
+              <h2 className="text-2xl sm:text-3xl font-serif text-gray-800 mb-6 border-b-2 border-gray-400 pb-2">
+                Praise for The Ward Trilogy
+              </h2>
+              <div className="bg-white rounded-lg shadow-md p-4 relative">
+                <span className="absolute text-4xl text-gray-300 -top-4 -left-4">“</span>
+                <p className="text-gray-700 text-base sm:text-lg leading-relaxed pl-6 font-serif">
+                  Kept you guessing until the last page. Great characters. Story never falters and leads you down many paths and possibilities.
+                </p>
+                <span className="absolute text-4xl text-gray-300 -bottom-4 -right-4">”</span>
+              </div>
+              <div className="bg-white rounded-lg shadow-md p-4 relative">
+                <span className="absolute text-4xl text-gray-300 -top-4 -left-4">“</span>
+                <p className="text-gray-700 text-base sm:text-lg leading-relaxed pl-6 font-serif">
+                  This book was a surprise. One of the best of the year. Literally hard to put down. Each chapter made me want to read the next. Full of surprises and turns. No part of it disappointed.
+                </p>
+                <span className="absolute text-4xl text-gray-300 -bottom-4 -right-4">”</span>
+              </div>
+              <div className="bg-white rounded-lg shadow-md p-4 relative">
+                <span className="absolute text-4xl text-gray-300 -top-4 -left-4">“</span>
+                <p className="text-gray-700 text-base sm:text-lg leading-relaxed pl-6 font-serif">
+                  OUTSTANDING DEBUT NOVEL. I loved everything about this book, the great characters, the totally cool dog and the great story. I can't wait to read the second installment, IF I SCREAM. I highly recommend this book.
+                </p>
+                <span className="absolute text-4xl text-gray-300 -bottom-4 -right-4">”</span>
+              </div>
+              <div className="bg-white rounded-lg shadow-md p-4 relative">
+                <span className="absolute text-4xl text-gray-300 -top-4 -left-4">“</span>
+                <p className="text-gray-700 text-base sm:text-lg leading-relaxed pl-6 font-serif">
+                  This was a 25 star book. I loved AN END TO SILENCE, the first book, but IF I SCREAM literally had me screaming. A totally to-die-for book. I can't wait for the final installment. Thanks author Clark for two - so far - totally fantastic books.
+                </p>
+                <span className="absolute text-4xl text-gray-300 -bottom-4 -right-4">”</span>
+              </div>
+              <div className="bg-white rounded-lg shadow-md p-4 relative">
+                <span className="absolute text-4xl text-gray-300 -top-4 -left-4">“</span>
+                <p className="text-gray-700 text-base sm:text-lg leading-relaxed pl-6 font-serif">
+                  Really great tale. Powerful characters and great police procedures. A very twisted plot and ending. Our hero is a mystery but a very real human. Love the Ward stories.
+                </p>
+                <span className="absolute text-4xl text-gray-300 -bottom-4 -right-4">”</span>
+              </div>
+              <div className="bg-white rounded-lg shadow-md p-4 relative">
+                <span className="absolute text-4xl text-gray-300 -top-4 -left-4">“</span>
+                <p className="text-gray-700 text-base sm:text-lg leading-relaxed pl-6 font-serif">
+                  This is the first book by W. H. Clark that I have read. It won't be the last. The storyline was great. Many twists and turns throughout the book. You won't be sorry if thrillers are what you like.
+                </p>
+                <span className="absolute text-4xl text-gray-300 -bottom-4 -right-4">”</span>
+              </div>
+            </div>
           </div>
-          <p className="text-lg sm:text-xl leading-relaxed mb-6 text-gray-700">
-            Wayne, AKA W.H. Clark, is the author behind <em>The Ward Trilogy</em>, a captivating series that blends traditional crime fiction with elements of dark mystery and high-stakes thrills. With a passion for storytelling and a unique voice, Wayne has crafted a world that will thrill and unsettle you.
-          </p>
-          <p className="text-lg sm:text-xl leading-relaxed mb-6 text-gray-700">
-            His own story, usually filled with fun and laughter, took a turn after a portentous encounter between his parents and his school teacher. After his teacher informed his parents that Wayne would one day use his intelligence to commit crime, his destiny seemed set. He began plotting the demise of his teacher, but the scheme never moved beyond planning, and he realized his true calling was writing about crime rather than living it.*
-          </p>
-          <p className="text-lg sm:text-xl leading-relaxed mb-6 text-gray-700">
-            Recently described as aloof, Wayne continues to craft compelling stories. Perhaps one day he will resurrect his plot against that teacher, but for now, he channels his creativity into bringing <em>The Ward Trilogy</em> to readers around the world.
-          </p>
-          <p className="text-sm sm:text-base text-gray-600 mt-4">*Based on a true story.</p>
         </section>
 
         {/* Footer */}
