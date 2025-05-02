@@ -24,12 +24,14 @@ const books = [
 
 const characters = [
   { id: 1, img: '/images/Ward-and-Jesus.png', caption: 'Ward and Jesús' },
-  { id: 2, img: '/images/McNeely.png',        caption: 'McNeely' },
-  { id: 3, img: '/images/Randall.png',        caption: 'Randall' },
-  { id: 4, img: '/images/Larsson.png',        caption: 'Larsson' },
-  { id: 5, img: '/images/ParisaSafi.png',     caption: 'Parisa' },
-  { id: 6, img: '/images/cherry2.png',     caption: 'Cherry' },
-  { id: 7, img: '/images/Alice.png',     caption: 'Alice' },
+  { id: 2, img: '/images/McNeely.png', caption: 'McNeely' },
+  { id: 3, img: '/images/Randall.png', caption: 'Randall' },
+  { id: 4, img: '/images/Larsson.png', caption: 'Larsson' },
+  { id: 5, img: '/images/ParisaSafi.png', caption: 'Parisa' },
+  { id: 6, img: '/images/cherry2.png', caption: 'Cherry' },
+  { id: 7, img: '/images/AliceWhite.png', caption: 'Alice' },
+  { id: 8, img: '/images/Jesus2.png', caption: 'Jesús' },
+  { id: 9, img: '/images/Mary.png', caption: 'Mary' },
 ];
 
 export default function PageClient() {
@@ -81,6 +83,37 @@ export default function PageClient() {
       </nav>
 
       <main className="max-w-5xl mx-auto py-16 px-4 sm:px-6 lg:px-8 space-y-24">
+        {/* New Release Section */}
+        <section id="new-release">
+          <h2 className="text-3xl font-semibold text-gray-800 mb-8">
+            New Release
+          </h2>
+          <div className="bg-white rounded-lg shadow hover:shadow-lg transition overflow-hidden">
+            <a
+              href={books[2].link}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src={books[2].img}
+                alt={`${books[2].title} cover`}
+                className="w-full h-80 object-cover object-top"
+              />
+              <div className="p-6 text-center">
+                <h3 className="text-2xl font-medium text-gray-800 mb-4">
+                  {books[2].title}
+                </h3>
+                <p className="text-lg text-gray-600 mb-6">
+                  The thrilling conclusion to The Ward Trilogy is here! The mystery of Ward's past unravels as we discover what happened on that fateful day in Afghanistan. Find out what moulded Ward into the man he is and finally understand the meaning of the little girl tattooed on his chest. <em>Made in Blood</em> is a rollercoaster journey into the darkness of war and the everlasting consequences of our actions.
+                </p>
+                <span className="inline-block bg-purple-600 text-white font-semibold py-3 px-6 rounded-lg shadow hover:bg-purple-700 transition">
+                  Get It Now
+                </span>
+              </div>
+            </a>
+          </div>
+        </section>
+
         {/* Books Section */}
         <section id="books">
           <h2 className="text-3xl font-semibold text-gray-800 mb-8">
@@ -110,31 +143,31 @@ export default function PageClient() {
           </div>
         </section>
 
-{/* Listen Section */}
-<section id="listen">
-  <h2 className="text-3xl font-semibold text-gray-800 mb-8">
-    Listen to the Books
-  </h2>
-  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-    {books.map((book) => (
-      <div
-        key={book.id}
-        className="bg-white rounded-lg shadow p-6 text-center"
-      >
-        <h3 className="text-xl font-medium text-gray-800 mb-2">
-          {book.title}
-        </h3>
-        {/* Audible Logo */}
-        <img
-          src="/images/AudibleLogo.jpg"
-          alt="Audible logo"
-          className="mx-auto mb-2 h-12 w-auto"
-        />
-        <p className="text-gray-600">Audiobook version coming soon.</p>
-      </div>
-    ))}
-  </div>
-</section>
+        {/* Listen Section */}
+        <section id="listen">
+          <h2 className="text-3xl font-semibold text-gray-800 mb-8">
+            Listen to the Books
+          </h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            {books.map((book) => (
+              <div
+                key={book.id}
+                className="bg-white rounded-lg shadow p-6 text-center"
+              >
+                <h3 className="text-xl font-medium text-gray-800 mb-2">
+                  {book.title}
+                </h3>
+                {/* Audible Logo */}
+                <img
+                  src="/images/AudibleLogo.jpg"
+                  alt="Audible logo"
+                  className="mx-auto mb-2 h-12 w-auto"
+                />
+                <p className="text-gray-600">Audiobook version coming soon.</p>
+              </div>
+            ))}
+          </div>
+        </section>
 
         {/* Characters Section */}
         <section id="characters">
@@ -144,8 +177,7 @@ export default function PageClient() {
           <p className="text-lg leading-relaxed mb-2">
             Click the button below if you would like to see some visualizations of
             some of the characters in The Ward Trilogy. This is how the characters
-            were pictured in the author’s puny brain. Your larger brain might
-            picture the characters totally differently.
+            were pictured in the author’s imagination. You are allowed to imagine the characters totally differently.
           </p>
           <button
             onClick={() => setShowChars(!showChars)}
@@ -166,11 +198,16 @@ export default function PageClient() {
               >
                 ‹
               </button>
-              <img
-                src={characters[currentChar].img}
-                alt={characters[currentChar].caption}
-                className="w-64 mx-8 rounded shadow"
-              />
+              <div className="text-center">
+                <img
+                  src={characters[currentChar].img}
+                  alt={characters[currentChar].caption}
+                  className="w-64 mx-8 rounded shadow"
+                />
+                <p className="mt-2 text-lg font-medium text-gray-800">
+                  {characters[currentChar].caption}
+                </p>
+              </div>
               <button
                 onClick={nextChar}
                 className="absolute right-0 p-3 bg-purple-600 text-white rounded-full shadow hover:bg-purple-700 transition"
@@ -205,8 +242,7 @@ export default function PageClient() {
           <p className="text-lg leading-relaxed mb-6">
             Recently described as aloof, Wayne continues to craft compelling
             stories. Perhaps one day he will resurrect his plot against that
-            teacher, but for now, he channels his creativity into bringing
-            <em>The Ward Trilogy</em> to readers around the world.
+            teacher, but for now, he channels his creativity into bringing <em>The Ward Trilogy</em> to readers around the world.
           </p>
           <p className="text-sm text-gray-600 mt-4">*Based on a true story.</p>
         </section>
@@ -214,7 +250,7 @@ export default function PageClient() {
         {/* Footer */}
         <footer className="bg-gray-50 py-6">
           <div className="max-w-5xl mx-auto text-center text-gray-600 text-sm">
-            &copy; {new Date().getFullYear()} W.H. Clark. All rights
+            © {new Date().getFullYear()} W.H. Clark. All rights
             reserved.
           </div>
         </footer>
