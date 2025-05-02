@@ -18,7 +18,7 @@ const books = [
     id: 3,
     title: 'Made in Blood',
     link: 'https://a.co/d/YOUR_ASIN3',
-    img: '/images/made-in-blood-cover-kindle-2.jpg',
+    img: '/images/made-in-blood-cover-kindle-2.jpg', // Keeping the original image for "Buy the Books"
   },
 ];
 
@@ -85,7 +85,7 @@ export default function PageClient() {
       <main className="max-w-6xl mx-auto py-12 sm:py-16 px-4 sm:px-6 lg:px-8 space-y-16">
         {/* New Release Section */}
         <section id="new-release" className="bg-gradient-to-br from-white to-gray-50 rounded-xl shadow-lg p-6 sm:p-8">
-          <h2 className="text-3xl sm:text-4xl font-semibold text-gray-800 mb-6 border-b-2 border-gray-400 pb-2">
+          <h2 className="text-3xl sm:text-4xl font-semibold text-gray-800 mb-6 border-b-2 border-purple-200 pb-2">
             It's finally here...
           </h2>
           <div className="bg-white rounded-lg overflow-hidden shadow-inner hover:shadow-xl transition">
@@ -95,22 +95,20 @@ export default function PageClient() {
               rel="noopener noreferrer"
             >
               <img
-                src="/images/made-in-blood-mockup.jpg"
+                src="/images/made-in-blood-mockup.jpg" // New mockup image
                 alt={`${books[2].title} mockup`}
-                className="w-64 sm:w-80 h-auto mx-auto object-cover transition-transform hover:scale-105"
+                className="w-64 sm:w-80 h-auto mx-auto object-cover transition-transform hover:scale-105" // Adjusted to fixed width, centered
               />
               <div className="p-6 text-center">
                 <h3 className="text-2xl sm:text-3xl font-medium text-gray-800 mb-4 hover:text-purple-700 transition-colors">
                   {books[2].title}
                 </h3>
                 <p className="text-lg text-center sm:text-xl text-gray-600 mb-6 leading-relaxed">
-                  <em>The thrilling conclusion to The Ward Trilogy is here!</em>
-                </p>
-                <p className="text-lg sm:text-xl text-left text-gray-600 mb-6 leading-relaxed">
-                  2011. Seven years after failing to prevent a Taliban assassination in Afghanistan, ex-sniper Detective Ward receives a crushing call: his spotter, Randall—his one true love—is dead. Grief-stricken and driven by a relentless pursuit of justice, Ward is forced to confront the devastating memories of Koh-e-Umid. His search for answers unveils a deadly conspiracy, pitting him against mercenary killer Tyler Ewart in a cat-and-mouse game that stretches from the mountains of Afghanistan to the highest levels of power.
-                </p>
-                <p className="text-lg sm:text-xl text-left text-gray-600 mb-6 leading-relaxed">
-                  As the bodies pile up, Ward fights for his life to unearth the chilling truth about what happened that fateful day in 2004.
+                  <em>The thrilling conclusion to The Ward Trilogy is here!</em> </p>
+<p className="text-lg sm:text-xl text-left text-gray-600 mb-6 leading-relaxed">
+2011. Seven years after failing to prevent a Taliban assassination in Afghanistan, ex-sniper Detective Ward receives a crushing call: his spotter, Randall—his one true love—is dead. Grief-stricken and driven by a relentless pursuit of justice, Ward is forced to confront the devastating memories of Koh-e-Umid. His search for answers unveils a deadly conspiracy, pitting him against mercenary killer Tyler Ewart in a cat-and-mouse game that stretches from the mountains of Afghanistan to the highest levels of power.</p>
+<p className="text-lg sm:text-xl text-left text-gray-600 mb-6 leading-relaxed">
+As the bodies pile up, Ward fights for his life to unearth the chilling truth about what happened that fateful day in 2004.
                 </p>
                 <span className="inline-block bg-purple-600 text-white font-semibold py-3 px-6 rounded-lg shadow-lg hover:bg-purple-700 transition-transform transform hover:scale-105">
                   Get It Now
@@ -122,7 +120,7 @@ export default function PageClient() {
 
         {/* Books Section */}
         <section id="books" className="bg-gray-50 rounded-xl shadow-lg p-6 sm:p-8">
-          <h2 className="text-3xl sm:text-4xl font-semibold text-gray-800 mb-6 border-b-2 border-gray-400 pb-2">
+          <h2 className="text-3xl sm:text-4xl font-semibold text-gray-800 mb-6 border-b-2 border-teal-200 pb-2">
             Buy the Books
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
@@ -151,7 +149,7 @@ export default function PageClient() {
 
         {/* Listen Section */}
         <section id="listen" className="bg-white rounded-xl shadow-lg p-6 sm:p-8">
-          <h2 className="text-3xl sm:text-4xl font-semibold text-gray-800 mb-6 border-b-2 border-gray-400 pb-2">
+          <h2 className="text-3xl sm:text-4xl font-semibold text-gray-800 mb-6 border-b-2 border-purple-200 pb-2">
             Listen to the Books
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
@@ -176,7 +174,7 @@ export default function PageClient() {
 
         {/* Characters Section */}
         <section id="characters" className="bg-gray-50 rounded-xl shadow-lg p-6 sm:p-8 overflow-visible">
-          <h2 className="text-3xl sm:text-4xl font-semibold text-gray-800 mb-4 border-b-2 border-gray-400 pb-2">
+          <h2 className="text-3xl sm:text-4xl font-semibold text-gray-800 mb-4 border-b-2 border-teal-200 pb-2">
             Characters
           </h2>
           <p className="text-lg sm:text-xl leading-relaxed mb-4 text-gray-700">
@@ -220,8 +218,8 @@ export default function PageClient() {
         </section>
 
         {/* About Section */}
-        <section id="about" className="bg-gray-100 rounded-xl shadow-lg p-6 sm:p-8">
-          <h2 className="text-3xl sm:text-4xl font-semibold text-gray-800 mb-6 border-b-2 border-gray-400 pb-2">
+        <section id="about" className="bg-white rounded-xl shadow-lg p-6 sm:p-8">
+          <h2 className="text-3xl sm:text-4xl font-semibold text-gray-800 mb-6 border-b-2 border-purple-200 pb-2">
             About the Author
           </h2>
           <div className="flex justify-center mb-6">
