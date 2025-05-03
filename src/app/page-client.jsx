@@ -50,7 +50,7 @@ export default function PageClient() {
       <section
         className="bg-gradient-to-r from-purple-700 to-indigo-800 text-white py-24 sm:py-32"
         style={{
-          backgroundImage: 'url(/images/title-image4.png), linear-gradient(to right, rgba(189,25, 0, 0.5), rgba(0, 120, 170, 0.4))',
+          backgroundImage: 'url(/images/title-image4.png), linear-gradient(to right, rgba(40, 140, 100, 0.6), rgba(0, 120, 170, 0.6))',
           backgroundBlendMode: 'overlay',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
@@ -125,7 +125,7 @@ export default function PageClient() {
 <em>Experience the pulse-pounding finale of The Ward Trilogy today!</em>
                 </p>
                 <span className="inline-block bg-purple-600 text-white font-semibold py-3 px-6 rounded-lg shadow-lg hover:bg-purple-700 transition-transform transform hover:scale-105">
-                  Get It Now
+                  Pre-Order it Now
                 </span>
               </div>
             </a>
