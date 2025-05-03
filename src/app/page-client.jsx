@@ -27,11 +27,12 @@ const characters = [
   { id: 2, img: '/images/McNeely.png', caption: 'McNeely' },
   { id: 3, img: '/images/Randall.png', caption: 'Randall' },
   { id: 4, img: '/images/Larsson.png', caption: 'Larsson' },
-  { id: 5, img: '/images/ParisaSafi.png', caption: 'Parisa' },
+  { id: 5, img: '/images/ParisaSafi.png', caption: 'Parisa Safi' },
   { id: 6, img: '/images/cherry2.png', caption: 'Cherry' },
   { id: 7, img: '/images/AliceWhite.png', caption: 'Alice' },
   { id: 8, img: '/images/Jesus2.png', caption: 'Jesús' },
-  { id: 9, img: '/images/Mary.png', caption: 'Mary' },
+  { id: 9, img: '/images/Newton.png', caption: 'Newton' },
+  { id: 10, img: '/images/Mary.png', caption: 'Mary' },
 ];
 
 export default function PageClient() {
@@ -49,7 +50,7 @@ export default function PageClient() {
       <section
         className="bg-gradient-to-r from-purple-700 to-indigo-800 text-white py-24 sm:py-32"
         style={{
-          backgroundImage: 'url(/images/title-image.jpg), linear-gradient(to right, rgba(107, 33, 168, 0.4), rgba(76, 29, 149, 0.4))',
+          backgroundImage: 'url(/images/title-image4.png), linear-gradient(to right, rgba(189,25, 0, 0.5), rgba(0, 120, 170, 0.4))',
           backgroundBlendMode: 'overlay',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
@@ -115,7 +116,7 @@ export default function PageClient() {
                   <em>The thrilling conclusion to The Ward Trilogy is here!</em>
                 </p>
                 <p className="text-lg sm:text-xl text-left text-gray-600 mb-6 leading-relaxed">
-                  2011. Seven years after failing to prevent a Taliban assassination in Afghanistan, ex-sniper Detective Ward receives a crushing call: his spotter, Randall—his one true love—is dead. Grief-stricken and driven by a relentless pursuit of justice, Ward is forced to confront the devastating memories of Koh-e-Umid. His search for answers unveils a deadly conspiracy, pitting him against mercenary killer Tyler Ewart in a cat-and-mouse game that stretches from the mountains of Afghanistan to the highest levels of power.
+                  2011. Seven years after failing to prevent a Taliban assassination in Afghanistan, ex-sniper Detective Ward receives a crushing call: his spotter, Randall—<em>his one true love</em>—is dead. Grief-stricken and driven by a relentless pursuit of justice, Ward is forced to confront the devastating memories of Koh-e-Umid. His search for answers unveils a deadly conspiracy, pitting him against mercenary killer Tyler Ewart in a cat-and-mouse game that stretches from the mountains of Afghanistan to the highest levels of power.
                 </p>
                 <p className="text-lg sm:text-xl text-left text-gray-600 mb-6 leading-relaxed">
                   As the bodies pile up, Ward fights for his life to unearth the chilling truth about what happened that fateful day in 2004.
@@ -191,7 +192,7 @@ export default function PageClient() {
             Characters
           </h2>
           <p className="text-lg sm:text-xl leading-relaxed mb-4 text-gray-700">
-            Click the button below if you would like to see some visualizations of some of the characters in The Ward Trilogy. This is how the characters were pictured in the author’s imagination. You are allowed to imagine the characters totally differently.
+            Click the button below if you would like to see some visualizations of some of the characters in The Ward Trilogy. This is how the characters were pictured in the author’s imagination. You are invited to imagine the characters exactly how you want to.
           </p>
           <button
             onClick={() => setShowChars(!showChars)}
@@ -262,42 +263,42 @@ export default function PageClient() {
               <div className="bg-white rounded-lg shadow-md p-4 relative">
                 <span className="absolute text-4xl text-gray-300 -top-4 -left-4">“</span>
                 <p className="text-gray-700 text-base sm:text-lg leading-relaxed pl-6 font-serif">
-                  Kept you guessing until the last page. Great characters. Story never falters and leads you down many paths and possibilities.
+                  <em>Kept you guessing until the last page.</em> Great characters. Story never falters and leads you down many paths and possibilities.
                 </p>
                 <span className="absolute text-4xl text-gray-300 -bottom-4 -right-4">”</span>
               </div>
               <div className="bg-white rounded-lg shadow-md p-4 relative">
                 <span className="absolute text-4xl text-gray-300 -top-4 -left-4">“</span>
                 <p className="text-gray-700 text-base sm:text-lg leading-relaxed pl-6 font-serif">
-                  This book was a surprise. One of the best of the year. Literally hard to put down. Each chapter made me want to read the next. Full of surprises and turns. No part of it disappointed.
+                  <em>This book was a surprise.</em> One of the best of the year. Literally hard to put down. Each chapter made me want to read the next. Full of surprises and turns. No part of it disappointed.
                 </p>
                 <span className="absolute text-4xl text-gray-300 -bottom-4 -right-4">”</span>
               </div>
               <div className="bg-white rounded-lg shadow-md p-4 relative">
                 <span className="absolute text-4xl text-gray-300 -top-4 -left-4">“</span>
                 <p className="text-gray-700 text-base sm:text-lg leading-relaxed pl-6 font-serif">
-                  OUTSTANDING DEBUT NOVEL. I loved everything about this book, the great characters, the totally cool dog and the great story. I can't wait to read the second installment, IF I SCREAM. I highly recommend this book.
+                  <em>OUTSTANDING DEBUT NOVEL.</em> I loved everything about this book, the great characters, the totally cool dog and the great story. I can't wait to read the second installment, IF I SCREAM. I highly recommend this book.
                 </p>
                 <span className="absolute text-4xl text-gray-300 -bottom-4 -right-4">”</span>
               </div>
               <div className="bg-white rounded-lg shadow-md p-4 relative">
                 <span className="absolute text-4xl text-gray-300 -top-4 -left-4">“</span>
                 <p className="text-gray-700 text-base sm:text-lg leading-relaxed pl-6 font-serif">
-                  This was a 25 star book. I loved AN END TO SILENCE, the first book, but IF I SCREAM literally had me screaming. A totally to-die-for book. I can't wait for the final installment. Thanks author Clark for two - so far - totally fantastic books.
+                  <em>This was a 25 star book.</em> I loved AN END TO SILENCE, the first book, but IF I SCREAM literally had me screaming. A totally to-die-for book. I can't wait for the final installment. Thanks author Clark for two - so far - totally fantastic books.
                 </p>
                 <span className="absolute text-4xl text-gray-300 -bottom-4 -right-4">”</span>
               </div>
               <div className="bg-white rounded-lg shadow-md p-4 relative">
                 <span className="absolute text-4xl text-gray-300 -top-4 -left-4">“</span>
                 <p className="text-gray-700 text-base sm:text-lg leading-relaxed pl-6 font-serif">
-                  Really great tale. Powerful characters and great police procedures. A very twisted plot and ending. Our hero is a mystery but a very real human. Love the Ward stories.
+                  <em>Really great tale.</em> Powerful characters and great police procedures. A very twisted plot and ending. Our hero is a mystery but a very real human. Love the Ward stories.
                 </p>
                 <span className="absolute text-4xl text-gray-300 -bottom-4 -right-4">”</span>
               </div>
               <div className="bg-white rounded-lg shadow-md p-4 relative">
                 <span className="absolute text-4xl text-gray-300 -top-4 -left-4">“</span>
                 <p className="text-gray-700 text-base sm:text-lg leading-relaxed pl-6 font-serif">
-                  This is the first book by W. H. Clark that I have read. It won't be the last. The storyline was great. Many twists and turns throughout the book. You won't be sorry if thrillers are what you like.
+                  <em>This is the first book by W. H. Clark that I have read.</em> It won't be the last. The storyline was great. Many twists and turns throughout the book. You won't be sorry if thrillers are what you like.
                 </p>
                 <span className="absolute text-4xl text-gray-300 -bottom-4 -right-4">”</span>
               </div>
