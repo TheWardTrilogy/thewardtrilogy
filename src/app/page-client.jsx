@@ -1,5 +1,5 @@
 'use client';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 const books = [
   {
@@ -17,7 +17,7 @@ const books = [
   {
     id: 3,
     title: 'Made in Blood',
-    link: 'https://a.co/d/YOUR_ASIN3',
+    link: 'https://a.co/d/hodyPmm',
     img: '/images/made-in-blood-cover-kindle-2.jpg',
   },
 ];
@@ -38,6 +38,11 @@ const characters = [
 export default function PageClient() {
   const [showChars, setShowChars] = useState(false);
   const [currentChar, setCurrentChar] = useState(0);
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
 
   const nextChar = () =>
     setCurrentChar((prev) => (prev + 1) % characters.length);
@@ -122,7 +127,7 @@ export default function PageClient() {
                   As the bodies pile up, Ward fights for his life to unearth the chilling truth about what happened that fateful day in 2004.
                 </p>
                 <p className="text-lg sm:text-xl text-center text-gray-900 mb-6 leading-relaxed">
-<em>Experience the pulse-pounding finale of The Ward Trilogy today!</em>
+                  <em>Pre-order the pulse-pounding finale of The Ward Trilogy today!</em>
                 </p>
                 <span className="inline-block bg-purple-600 text-white font-semibold py-3 px-6 rounded-lg shadow-lg hover:bg-purple-700 transition-transform transform hover:scale-105">
                   Pre-Order it Now
@@ -308,11 +313,79 @@ export default function PageClient() {
 
         {/* Footer */}
         <footer className="bg-gray-800 text-white py-6">
-          <div className="max-w-6xl mx-auto text-center text-sm sm:text-base">
-            © {new Date().getFullYear()} W.H. Clark. All rights reserved. |{' '}
-            <a href="https://twitter.com/whclarkauthor" target="_blank" rel="noopener noreferrer" className="text-teal-300 hover:text-teal-400 transition">
-              Twitter (@whclarkauthor)
-            </a>
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            {isClient && (
+              <div id="mc_embed_shell" className="mb-8">
+                <div id="mc_embed_signup" className="bg-gray-700 rounded-lg p-6 max-w-md mx-auto">
+                  <form
+                    action="https://whclarkauthor.us10.list-manage.com/subscribe/post?u=77cc1b9022d8e56a2d5b84930&id=8beab79974&f_id=007d4ee4f0"
+                    method="post"
+                    id="mc-embedded-subscribe-form"
+                    name="mc-embedded-subscribe-form"
+                    className="validate space-y-4"
+                    target="_self"
+                    noValidate
+                  >
+                    <div id="mc_embed_signup_scroll">
+                      <h2 className="text-2xl sm:text-3xl font-semibold text-white mb-4 text-center">
+                        Stay in touch
+                      </h2>
+                      <div className="indicates-required text-gray-300 text-sm mb-2 text-center">
+                        <span className="asterisk text-red-400">*</span> indicates required
+                      </div>
+                      <div className="mc-field-group">
+                        <label htmlFor="mce-EMAIL" className="block text-gray-200 text-sm font-medium mb-1">
+                          Email Address <span className="asterisk text-red-400">*</span>
+                        </label>
+                        <input
+                          type="email"
+                          name="EMAIL"
+                          className="required email w-full px-4 py-2 bg-gray-600 text-white border border-gray-500 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-400"
+                          id="mce-EMAIL"
+                          required
+                        />
+                      </div>
+                      <div id="mce-responses" className="clear foot space-y-2">
+                        <div className="response text-red-400 text-sm" id="mce-error-response" style={{ display: 'none' }}></div>
+                        <div className="response text-green-400 text-sm" id="mce-success-response" style={{ display: 'none' }}></div>
+                      </div>
+                      <div aria-hidden="true" style={{ position: 'absolute', left: '-5000px' }}>
+                        {/* real people should not fill this in and expect good things - do not remove this or risk form bot signups */}
+                        <input type="text" name="b_77cc1b9022d8e56a2d5b84930_8beab79974" tabIndex="-1" />
+                      </div>
+                      <div className="optionalParent">
+                        <div className="clear foot text-center space-y-4 mt-6">
+                          <input
+                            type="submit"
+                            name="subscribe"
+                            id="mc-embedded-subscribe"
+                            className="button bg-teal-400 text-white font-semibold py-2 px-6 rounded-lg shadow-lg hover:bg-teal-500 transition-transform transform hover:scale-105 cursor-pointer"
+                            value="Subscribe"
+                          />
+                          <p className="mt-4">
+                            <a href="http://eepurl.com/jdR7D-" title="Mailchimp - email marketing made easy and fun">
+                              <span className="inline-block bg-transparent rounded">
+                                <img
+                                  className="refferal_badge h-8 w-auto"
+                                  src="https://digitalasset.intuit.com/render/content/dam/intuit/mc-fe/en_us/images/intuit-mc-rewards-text-dark.svg"
+                                  alt="Intuit Mailchimp"
+                                />
+                              </span>
+                            </a>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            )}
+            <div className="text-center text-sm sm:text-base">
+              © {new Date().getFullYear()} W.H. Clark. All rights reserved. |{' '}
+              <a href="https://twitter.com/whclarkauthor" target="_blank" rel="noopener noreferrer" className="text-teal-300 hover:text-teal-400 transition">
+                Twitter (@whclarkauthor)
+              </a>
+            </div>
           </div>
         </footer>
       </main>
