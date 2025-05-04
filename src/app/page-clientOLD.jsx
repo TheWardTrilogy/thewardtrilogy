@@ -5,19 +5,19 @@ const books = [
   {
     id: 1,
     title: 'An End to a Silence',
-    link: 'https://amzn.to/4lZBnll',
+    link: 'https://amzn.to/43eOSpK',
     img: 'https://m.media-amazon.com/images/I/81cDlXSjJLL._SY522_.jpg',
   },
   {
     id: 2,
     title: 'If I Scream',
-    link: 'https://amzn.to/43gQqiY',
+    link: 'https://amzn.to/43dDURn',
     img: 'https://m.media-amazon.com/images/I/71n-MNRaJGL._SY522_.jpg',
   },
   {
     id: 3,
     title: 'Made in Blood',
-    link: 'https://amzn.to/3Ysx2wR',
+    link: 'https://amzn.to/4k0Y72p',
     img: '/images/made-in-blood-cover-kindle-2.jpg',
   },
 ];
@@ -48,10 +48,6 @@ export default function PageClient() {
     setCurrentChar((prev) => (prev + 1) % characters.length);
   const prevChar = () =>
     setCurrentChar((prev) => (prev - 1 + characters.length) % characters.length);
-
-  const handleLinkClick = (link) => {
-    console.log(`Navigating to: ${link}`);
-  };
 
   return (
     <>
@@ -111,7 +107,6 @@ export default function PageClient() {
               href={books[2].link}
               target="_blank"
               rel="noopener noreferrer"
-              onClick={() => handleLinkClick(books[2].link)}
             >
               <img
                 src="/images/made-in-blood-mockup.jpg"
@@ -154,7 +149,6 @@ export default function PageClient() {
                 href={book.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                onClick={() => handleLinkClick(book.link)}
                 className="bg-white rounded-lg shadow-md hover:shadow-xl transition-all overflow-hidden"
               >
                 <img
@@ -334,7 +328,7 @@ export default function PageClient() {
                   >
                     <div id="mc_embed_signup_scroll">
                       <h2 className="text-2xl sm:text-3xl font-semibold text-white mb-4 text-center">
-                        Newsletter Sign-up
+                        Stay in touch
                       </h2>
                       <div className="indicates-required text-gray-300 text-sm mb-2 text-center">
                         <span className="asterisk text-red-400">*</span> indicates required
@@ -388,13 +382,7 @@ export default function PageClient() {
             )}
             <div className="text-center text-sm sm:text-base">
               © {new Date().getFullYear()} W.H. Clark. All rights reserved. |{' '}
-              <a
-                href="https://twitter.com/whclarkauthor"
-                target="_blank"
-                rel="noopener noreferrer"
-                onClick={() => handleLinkClick("https://twitter.com/whclarkauthor")}
-                className="text-teal-300 hover:text-teal-400 transition"
-              >
+              <a href="https://twitter.com/whclarkauthor" target="_blank" rel="noopener noreferrer" className="text-teal-300 hover:text-teal-400 transition">
                 Twitter (@whclarkauthor)
               </a>
               <p className="text-xs text-gray-400 mt-2">As an Amazon Associate, I earn from qualifying purchases.</p>
