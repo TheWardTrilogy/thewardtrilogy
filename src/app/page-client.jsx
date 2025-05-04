@@ -50,7 +50,8 @@ export default function PageClient() {
     setCurrentChar((prev) => (prev - 1 + characters.length) % characters.length);
 
   const handleLinkClick = (link) => {
-    console.log(`Navigating to: ${link}`);
+    console.log(`Attempting to navigate to: ${link}`);
+    window.location.href = link; // Force navigation to ensure it works
   };
 
   return (
@@ -111,7 +112,7 @@ export default function PageClient() {
               href={books[2].link}
               target="_blank"
               rel="noopener noreferrer"
-              onClick={() => handleLinkClick(books[2].link)}
+              onClick={(e) => { e.preventDefault(); handleLinkClick(books[2].link); }}
             >
               <img
                 src="/images/made-in-blood-mockup.jpg"
@@ -154,7 +155,7 @@ export default function PageClient() {
                 href={book.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                onClick={() => handleLinkClick(book.link)}
+                onClick={(e) => { e.preventDefault(); handleLinkClick(book.link); }}
                 className="bg-white rounded-lg shadow-md hover:shadow-xl transition-all overflow-hidden"
               >
                 <img
@@ -392,7 +393,7 @@ export default function PageClient() {
                 href="https://twitter.com/whclarkauthor"
                 target="_blank"
                 rel="noopener noreferrer"
-                onClick={() => handleLinkClick("https://twitter.com/whclarkauthor")}
+                onClick={(e) => { e.preventDefault(); handleLinkClick("https://twitter.com/whclarkauthor"); }}
                 className="text-teal-300 hover:text-teal-400 transition"
               >
                 Twitter (@whclarkauthor)
