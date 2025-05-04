@@ -5,19 +5,19 @@ const books = [
   {
     id: 1,
     title: 'An End to a Silence',
-    link: 'https://a.co/d/0u6Bv5M',
+    link: 'https://amzn.to/43eOSpK',
     img: 'https://m.media-amazon.com/images/I/81cDlXSjJLL._SY522_.jpg',
   },
   {
     id: 2,
     title: 'If I Scream',
-    link: 'https://a.co/d/5aeZ6uP',
+    link: 'https://amzn.to/43dDURn',
     img: 'https://m.media-amazon.com/images/I/71n-MNRaJGL._SY522_.jpg',
   },
   {
     id: 3,
     title: 'Made in Blood',
-    link: 'https://a.co/d/hodyPmm',
+    link: 'https://amzn.to/4k0Y72p',
     img: '/images/made-in-blood-cover-kindle-2.jpg',
   },
 ];
@@ -127,7 +127,7 @@ export default function PageClient() {
                   As the bodies pile up, Ward fights for his life to unearth the chilling truth about what happened that fateful day in 2004.
                 </p>
                 <p className="text-lg sm:text-xl text-center text-gray-900 mb-6 leading-relaxed">
-                  <em>Pre-order the pulse-pounding finale of The Ward Trilogy today!</em>
+                  <em>Experience the pulse-pounding finale of The Ward Trilogy today!</em>
                 </p>
                 <span className="inline-block bg-purple-600 text-white font-semibold py-3 px-6 rounded-lg shadow-lg hover:bg-purple-700 transition-transform transform hover:scale-105">
                   Pre-Order it Now
@@ -385,6 +385,7 @@ export default function PageClient() {
               <a href="https://twitter.com/whclarkauthor" target="_blank" rel="noopener noreferrer" className="text-teal-300 hover:text-teal-400 transition">
                 Twitter (@whclarkauthor)
               </a>
+              <p className="text-xs text-gray-400 mt-2">As an Amazon Associate, I earn from qualifying purchases.</p>
             </div>
           </div>
         </footer>
