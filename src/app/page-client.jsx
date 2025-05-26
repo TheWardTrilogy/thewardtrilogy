@@ -6,19 +6,19 @@ const books = [
     id: 1,
     title: 'An End to a Silence',
     link: 'https://amzn.to/4lZBnll',
-    img: 'https://m.media-amazon.com/images/I/81cDlXSjJLL._SY522_.jpg',
+    img: 'https://m.media-amazon.com/images/W/MEDIAX_1215821-T2/images/I/81AdEVHSKML._SL1500_.jpg',
   },
   {
     id: 2,
     title: 'If I Scream',
     link: 'https://amzn.to/43gQqiY',
-    img: 'https://m.media-amazon.com/images/I/71n-MNRaJGL._SY522_.jpg',
+    img: 'https://m.media-amazon.com/images/W/MEDIAX_1215821-T2/images/I/81bBro8tX-L._SL1500_.jpg',
   },
   {
     id: 3,
     title: 'Made in Blood',
     link: 'https://amzn.to/3Ysx2wR',
-    img: '/images/made-in-blood-cover-kindle-2.jpg',
+    img: 'https://m.media-amazon.com/images/W/MEDIAX_1215821-T2/images/I/81QhpTZ8ZTL._SL1500_.jpg',
   },
 ];
 
@@ -60,7 +60,7 @@ export default function PageClient() {
       <section
         className="bg-gradient-to-r from-purple-700 to-indigo-800 text-white py-24 sm:py-32"
         style={{
-          backgroundImage: 'url(/images/title-image4.png), linear-gradient(to right, rgba(40, 140, 100, 0.6), rgba(0, 120, 170, 0.6))',
+          backgroundImage: 'url(/images/title-image4.png), linear-gradient(to right, rgba(28, 0, 135, 0.6), rgba(135, 0, 47, 0.6))',
           backgroundBlendMode: 'overlay',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
@@ -115,7 +115,7 @@ export default function PageClient() {
               onClick={(e) => { e.preventDefault(); handleLinkClick(books[2].link); }}
             >
               <img
-                src="/images/made-in-blood-mockup.jpg"
+                src="/images/kindle-and-pback-mockup.png"
                 alt={`${books[2].title} mockup`}
                 className="w-64 sm:w-80 h-auto mx-auto object-cover transition-transform hover:scale-105"
               />
@@ -252,7 +252,7 @@ export default function PageClient() {
               </h2>
               <div className="flex justify-center mb-6">
                 <img
-                  src="/images/whclark.png"
+                  src="/images/whclark2.png"
                   alt="W.H. Clark"
                   className="w-32 h-32 sm:w-40 sm:h-40 rounded-full shadow-lg object-cover"
                 />
