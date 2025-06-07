@@ -18,7 +18,7 @@ const books = [
     id: 3,
     title: 'Made in Blood',
     link: 'https://amzn.to/4jzDLg5',
-    img: 'https://m.media-amazon.com/images/W/MEDIAX_1215821-T2/images/I/81QhpTZ8ZTL._SL1500_.jpg',
+    img: 'https://m.media-amazon.com/images/I/81sX9Q0lgEL._SL1500_.jpg',
   },
 ];
 
