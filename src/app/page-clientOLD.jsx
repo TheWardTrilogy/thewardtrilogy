@@ -18,7 +18,7 @@ const books = [
     id: 3,
     title: 'Made in Blood',
     link: 'https://amzn.to/4jzDLg5',
-    img: 'https://m.media-amazon.com/images/W/MEDIAX_1215821-T2/images/I/81QhpTZ8ZTL._SL1500_.jpg',
+    img: 'https://m.media-amazon.com/images/I/81sX9Q0lgEL._SL1500_.jpg',
   },
 ];
 
@@ -140,6 +140,172 @@ export default function PageClient() {
                 </span>
               </div>
             </a>
+            {/* Goodreads Giveaway Widget */}
+            <div className="p-6 text-center">
+              <p className="text-lg sm:text-xl text-gray-700 mb-4">
+                Want a chance to win a copy of <em>{books[2].title}</em>?
+              </p>
+              <div id="goodreadsGiveawayWidget414548" className="mx-auto" style={{ maxWidth: '350px' }}>
+                <div
+                  className="goodreadsGiveawayWidget"
+                  style={{
+                    margin: '10px auto',
+                    padding: '10px 15px',
+                    border: '2px solid #EBE8D5',
+                    borderRadius: '10px',
+                  }}
+                >
+                  <style jsx>{`
+                    .goodreadsGiveawayWidget {
+                      color: #555;
+                      font-family: georgia, serif;
+                      font-weight: normal;
+                      text-align: left;
+                      font-size: 14px;
+                      font-style: normal;
+                      background: white;
+                    }
+                    .goodreadsGiveawayWidget p {
+                      margin: 0 0 0.5em !important;
+                      padding: 0;
+                    }
+                    .goodreadsGiveawayWidgetEnterLink {
+                      display: inline-block;
+                      color: #181818;
+                      background-color: #F6F6EE;
+                      border: 1px solid #9D8A78;
+                      border-radius: 3px;
+                      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+                      font-weight: bold;
+                      text-decoration: none;
+                      outline: none;
+                      font-size: 13px;
+                      padding: 8px 12px;
+                    }
+                    .goodreadsGiveawayWidgetEnterLink:hover {
+                      color: #181818;
+                      background-color: #F7F2ED;
+                      border: 1px solid #AFAFAF;
+                      text-decoration: none;
+                    }
+                  `}</style>
+                  <h2
+                    style={{
+                      margin: '0 0 10px',
+                      padding: '0',
+                      fontStyle: 'italic',
+                      fontSize: '20px',
+                      lineHeight: '20px',
+                      fontWeight: 'normal',
+                      textAlign: 'center',
+                      color: '#555',
+                    }}
+                  >
+                    <a
+                      href="https://www.goodreads.com"
+                      target="_blank"
+                      rel="nofollow noopener"
+                      onClick={(e) => {
+                        e.preventDefault();
+                        handleLinkClick('https://www.goodreads.com');
+                      }}
+                    >
+                      Goodreads
+                    </a>{' '}
+                    Book Giveaway
+                  </h2>
+                  <div style={{ float: 'left' }}>
+                    <a
+                      rel="nofollow"
+                      href="https://www.goodreads.com/book/show/232767670"
+                      onClick={(e) => {
+                        e.preventDefault();
+                        handleLinkClick('https://www.goodreads.com/book/show/232767670');
+                      }}
+                    >
+                      <img
+                        alt="Made in Blood by W.H. Clark"
+                        title="Made in Blood by W.H. Clark"
+                        width="100"
+                        src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1746295477l/232767670._SX318_.jpg"
+                      />
+                    </a>
+                  </div>
+                  <div style={{ margin: '0 0 0 110px', padding: '0' }}>
+                    <h3
+                      style={{
+                        margin: '0',
+                        padding: '0',
+                        fontSize: '16px',
+                        lineHeight: '20px',
+                        fontWeight: 'normal',
+                        fontStyle: 'normal',
+                      }}
+                    >
+                      <a
+                        rel="nofollow"
+                        href="https://www.goodreads.com/book/show/232767670"
+                        onClick={(e) => {
+                          e.preventDefault();
+                          handleLinkClick('https://www.goodreads.com/book/show/232767670');
+                        }}
+                      >
+                        Made in Blood
+                      </a>
+                    </h3>
+                    <h4 style={{ margin: '0 0 10px', padding: '0', fontStyle: 'normal', fontWeight: 'normal' }}>
+                      by{' '}
+                      <a
+                        style={{ textDecoration: 'none' }}
+                        rel="nofollow"
+                        href="https://www.goodreads.com/author/show/5955317.W_H_Clark"
+                        onClick={(e) => {
+                          e.preventDefault();
+                          handleLinkClick('https://www.goodreads.com/author/show/5955317.W_H_Clark');
+                        }}
+                      >
+                        W.H. Clark
+                      </a>
+                    </h4>
+                    <div className="giveaway_details">
+                      <p>Giveaway ends June 18, 2025.</p>
+                      <p>
+                        See the{' '}
+                        <a
+                          style={{ textDecoration: 'none' }}
+                          rel="nofollow"
+                          href="https://www.goodreads.com/giveaway/show/414548"
+                          onClick={(e) => {
+                            e.preventDefault();
+                            handleLinkClick('https://www.goodreads.com/giveaway/show/414548');
+                          }}
+                        >
+                          giveaway details
+                        </a>{' '}
+                        at Goodreads.
+                      </p>
+                    </div>
+                  </div>
+                  <div style={{ clear: 'both' }}></div>
+                  <a
+                    className="goodreadsGiveawayWidgetEnterLink"
+                    rel="nofollow"
+                    href="https://www.goodreads.com/giveaway/enter_kindle_giveaway/414548"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      handleLinkClick('https://www.goodreads.com/giveaway/enter_kindle_giveaway/414548');
+                    }}
+                  >
+                    Enter Giveaway
+                  </a>
+                </div>
+                <script
+                  src="https://www.goodreads.com/giveaway/widget/414548"
+                  type="text/javascript"
+                  charSet="utf-8"
+                ></script>
+              </div>
+            </div>
           </div>
         </section>
 
