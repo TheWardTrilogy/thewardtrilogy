@@ -6,19 +6,19 @@ const books = [
     id: 1,
     title: 'An End to a Silence',
     link: 'https://amzn.to/4lZBnll',
-    img: 'https://m.media-amazon.com/images/I/81AdEVHSKML._SL1500_.jpg',
+    img: 'https://m.media-amazon.com/images/I/918jQTzxZhL._SY522_.jpg',
   },
   {
     id: 2,
     title: 'If I Scream',
     link: 'https://amzn.to/43gQqiY',
-    img: 'https://m.media-amazon.com/images/I/81bBro8tX-L._SL1500_.jpg',
+    img: 'https://m.media-amazon.com/images/I/81eT9kBrzNL._SY522_.jpg',
   },
   {
     id: 3,
     title: 'Made in Blood',
     link: 'https://amzn.to/4jzDLg5',
-    img: 'https://m.media-amazon.com/images/I/81sX9Q0lgEL._SL1500_.jpg',
+    img: 'https://m.media-amazon.com/images/I/91w9SIKjQxL._SY522_.jpg',
   },
 ];
 
@@ -115,7 +115,7 @@ export default function PageClient() {
               onClick={(e) => { e.preventDefault(); handleLinkClick(books[2].link); }}
             >
               <img
-                src="/images/kindle-and-pback-mockup.png"
+                src="/images/kindle-and-pback-mockup2.png"
                 alt={`${books[2].title} mockup`}
                 className="w-64 sm:w-80 h-auto mx-auto object-cover transition-transform hover:scale-105"
               />
