@@ -1,0 +1,6 @@
+# Enforce LF for all text files (best for web/Node.js projects)
+* text=auto eol=lf
+
+# Ensure package files always use LF
+package.json text eol=lf
+package-lock.json text eol=lf
